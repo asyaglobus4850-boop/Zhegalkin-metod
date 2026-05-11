@@ -57,7 +57,7 @@ class ZhegalkinCalculator {
                 if (i === 0) {
                     terms.push("1");
                 } else {
-                    const term = this._indexToTerm(i);
+                    let term = this._indexToTerm(i);
                     terms.push(term);
                 }
             }
