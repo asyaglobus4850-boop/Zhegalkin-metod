@@ -1,0 +1,228 @@
+<details><summary>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 25px 30px;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+header p {
+    color: #bdc3c7;
+    margin-top: 8px;
+}
+
+.main {
+    display: flex;
+    gap: 20px;
+    padding: 25px;
+}
+
+.controls {
+    width: 320px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.controls h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 8px;
+}
+
+.control-group {
+    margin-bottom: 20px;
+}
+
+.control-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #2c3e50;
+}
+
+select, input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+select:focus, input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+input {
+    font-family: monospace;
+}
+
+small {
+    display: block;
+    margin-top: 5px;
+    color: #7f8c8d;
+    font-size: 11px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#calculateBtn {
+    background: #27ae60;
+    color: white;
+}
+
+#calculateBtn:hover {
+    background: #219a52;
+}
+
+#animateBtn {
+    background: #3498db;
+    color: white;
+}
+
+#animateBtn:hover {
+    background: #2980b9;
+}
+
+#exampleBtn {
+    background: #e67e22;
+    color: white;
+}
+
+#exampleBtn:hover {
+    background: #d35400;
+}
+
+.result {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.result h4 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.polynomial {
+    background: #ecf0f1;
+    padding: 10px;
+    border-radius: 8px;
+    font-family: monospace;
+    font-size: 14px;
+    word-break: break-all;
+    margin-bottom: 10px;
+}
+
+.coefficients {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.coeff-badge {
+    background: #667eea;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-family: monospace;
+    font-size: 12px;
+}
+
+.info {
+    background: #e3f2fd;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 13px;
+}
+
+.info ol {
+    margin: 10px 0 0 20px;
+}
+
+.visualization {
+    flex: 1;
+    background: white;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.visualization h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+canvas {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: white;
+    max-width: 100%;
+    height: auto;
+}
+
+.hint {
+    margin-top: 15px;
+    color: #7f8c8d;
+    font-size: 13px;
+}
+
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 13px;
+}
+
+@media (max-width: 800px) {
+    .main {
+        flex-direction: column;
+    }
+    .controls {
+        width: 100%;
+    }
+}
+</details>

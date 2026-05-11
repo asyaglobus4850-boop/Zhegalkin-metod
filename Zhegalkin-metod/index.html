@@ -1,0 +1,77 @@
+<details><summary>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Метод Жегалкина - Визуализация</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📊 Метод Жегалкина</h1>
+            <p>Визуализация построения полинома булевой функции</p>
+        </header>
+
+        <div class="main">
+            <div class="controls">
+                <h3>Управление</h3>
+                
+                <div class="control-group">
+                    <label>Количество переменных:</label>
+                    <select id="varCount">
+                        <option value="2">2 переменные (4 набора)</option>
+                        <option value="3" selected>3 переменные (8 наборов)</option>
+                        <option value="4">4 переменные (16 наборов)</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label>Таблица истинности:</label>
+                    <input type="text" id="truthTable" placeholder="01101001">
+                    <small>Порядок наборов: 000, 001, 010, 011, 100, 101, 110, 111</small>
+                </div>
+
+                <div class="buttons">
+                    <button id="calculateBtn">▶ Рассчитать</button>
+                    <button id="animateBtn">🎬 Анимация</button>
+                    <button id="exampleBtn">📋 Пример XOR</button>
+                </div>
+
+                <div class="result">
+                    <h4>Результат:</h4>
+                    <div class="polynomial" id="polynomial">—</div>
+                    <div class="coefficients" id="coefficients"></div>
+                </div>
+
+                <div class="info">
+                    <strong>📐 Метод треугольника:</strong>
+                    <ol>
+                        <li>Первая строка — таблица истинности</li>
+                        <li>Каждая следующая = XOR соседних значений</li>
+                        <li>Левый столбец — коэффициенты <em>aᵢ</em></li>
+                        <li>Полином: a₀ ⊕ a₁x₁ ⊕ a₂x₂ ⊕ a₃x₁x₂ ⊕ ...</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="visualization">
+                <h3>🔺 Треугольник Жегалкина</h3>
+                <canvas id="triangleCanvas" width="800" height="400"></canvas>
+                <p class="hint">💡 Коэффициенты — левый столбец (выделен синим цветом)</p>
+            </div>
+        </div>
+
+        <footer>
+            Дипломная работа | Дискретная математика | Алгебра Жегалкина
+        </footer>
+    </div>
+
+    <script src="js/calculator.js"></script>
+    <script src="js/visualizer.js"></script>
+    <script src="js/parser.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
+</details>
