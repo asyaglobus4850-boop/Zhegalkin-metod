@@ -74,7 +74,7 @@ class ZhegalkinCalculator {
         
         for (let i = 0; i < this.variablesCount; i++) {
             if (n & (1 << i)) {
-                vars.push(x${i + 1});
+                vars.push("x" + (i + 1));
             }
         }
         
